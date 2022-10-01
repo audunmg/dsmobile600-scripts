@@ -1,4 +1,4 @@
-FROM localhost/debian:wheezy
+FROM localhost/debian:jessie
 
 RUN apt-get update; apt-get install -qqqy sane-utils
 
