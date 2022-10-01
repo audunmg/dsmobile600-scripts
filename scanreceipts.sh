@@ -121,7 +121,7 @@ while [ "$finished" == "0" ]; do
     mogrify -fuzz 5% -trim +repage "$unpapered"
     xloadimage "$unpapered" "$filename"
     while true; do
-      read -p "Keep (y/n/r)" i
+      read -p "Keep this scan? (Raw/Yes/No/Cancel)" i
       case "$i" in
         y|Y)
           if convert "$unpapered" +dither -colors 256 -density "$res" -units PixelsPerInch PNG8:"$final"; then
